@@ -1,0 +1,30 @@
+meta {
+  name: Crear Transacción (Compra)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url_name}}/transacciones
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "clienteId": 1,
+    "detalles": [
+      { "productoId": 1, "cantidad": 2 },
+      { "productoId": 2, "cantidad": 1 }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

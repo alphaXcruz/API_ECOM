@@ -1,0 +1,30 @@
+meta {
+  name: Crear Producto
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url_name}}/productos
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Pizza Margarita",
+    "descripcion": "Pizza clásica italiana con tomate y mozzarella",
+    "precio": 45.50,
+    "stock": 30,
+    "categoria": "Pizzas"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
