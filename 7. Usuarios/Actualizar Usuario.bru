@@ -1,0 +1,28 @@
+meta {
+  name: Actualizar Usuario
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{url_name}}/usuarios/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Admin Actualizado",
+    "email": "admin@tienda.com",
+    "rol": "ADMIN"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

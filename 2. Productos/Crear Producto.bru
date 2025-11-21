@@ -1,0 +1,32 @@
+meta {
+  name: Crear Producto
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url_name}}/productos
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Laptop HP",
+    "descripcion": "Laptop HP 15 pulgadas, 8GB RAM, 256GB SSD",
+    "precio": 15000.00,
+    "stock": 10,
+    "categoria": {
+      "id": 1
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

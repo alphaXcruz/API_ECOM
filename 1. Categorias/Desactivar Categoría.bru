@@ -1,0 +1,15 @@
+meta {
+  name: Desactivar Categoría
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{url_name}}/categorias/1/desactivar
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Vaciar Carrito
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{url_name}}/carrito/1/vaciar
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

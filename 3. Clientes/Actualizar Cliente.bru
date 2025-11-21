@@ -1,0 +1,27 @@
+meta {
+  name: Actualizar Cliente
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url_name}}/clientes/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Juan Pérez Actualizado",
+    "email": "juan.nuevo@example.com",
+    "telefono": "5559999999"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

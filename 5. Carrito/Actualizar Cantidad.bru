@@ -1,0 +1,26 @@
+meta {
+  name: Actualizar Cantidad
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{url_name}}/carrito/1/items/2
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "cantidad": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

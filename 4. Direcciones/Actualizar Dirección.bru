@@ -1,0 +1,29 @@
+meta {
+  name: Actualizar Dirección
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url_name}}/direcciones/1/cliente/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "calle": "Av. Reforma Actualizada",
+    "numero": "456",
+    "ciudad": "Ciudad de México",
+    "codigoPostal": "01100",
+    "referencia": "Torre B, departamento 301"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

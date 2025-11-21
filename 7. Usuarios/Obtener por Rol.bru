@@ -1,0 +1,15 @@
+meta {
+  name: Obtener por Rol
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url_name}}/usuarios/rol/ADMIN
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

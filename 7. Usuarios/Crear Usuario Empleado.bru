@@ -1,0 +1,28 @@
+meta {
+  name: Crear Usuario Empleado
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url_name}}/usuarios
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Carlos Empleado",
+    "email": "empleado@tienda.com",
+    "password": "empleado123",
+    "rol": "EMPLEADO"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Verificar Email Existe
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{url_name}}/clientes/existe?email=juan@example.com
+  body: none
+  auth: inherit
+}
+
+params:query {
+  email: juan@example.com
+}
+
+settings {
+  encodeUrl: true
+}

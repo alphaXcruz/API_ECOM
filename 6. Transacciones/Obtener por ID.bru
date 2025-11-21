@@ -1,0 +1,15 @@
+meta {
+  name: Obtener por ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_name}}/transacciones/1
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

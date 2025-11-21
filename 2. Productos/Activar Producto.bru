@@ -1,0 +1,15 @@
+meta {
+  name: Activar Producto
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{url_name}}/productos/1/activar
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

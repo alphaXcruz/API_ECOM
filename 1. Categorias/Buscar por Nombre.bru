@@ -1,0 +1,16 @@
+meta {
+  name: Buscar por Nombre
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url_name}}/categorias/nombre/Electrónica
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

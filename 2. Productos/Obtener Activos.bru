@@ -1,0 +1,15 @@
+meta {
+  name: Obtener Activos
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_name}}/productos/activos
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

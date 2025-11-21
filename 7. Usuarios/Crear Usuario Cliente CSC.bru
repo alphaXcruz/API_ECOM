@@ -1,0 +1,35 @@
+meta {
+  name: Crear Usuario Cliente CSC
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{url_name}}/usuarios/registrar-cliente
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "usuario": {
+      "nombre": "Carlos Ramírez",
+      "email": "carlos@example.com",
+      "password": "password123"
+    },
+    "cliente": {
+      "nombre": "Carlos Ramírez",
+      "email": "carlos@example.com",
+      "telefono": "5551234567"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

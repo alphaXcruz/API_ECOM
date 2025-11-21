@@ -1,0 +1,19 @@
+meta {
+  name: Actualizar Stock
+  type: http
+  seq: 11
+}
+
+patch {
+  url: {{url_name}}/productos/1/stock?cantidad=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  cantidad: 20
+}
+
+settings {
+  encodeUrl: true
+}

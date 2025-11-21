@@ -1,0 +1,15 @@
+meta {
+  name: Cancelar Transacción
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{url_name}}/transacciones/1/cancelar
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

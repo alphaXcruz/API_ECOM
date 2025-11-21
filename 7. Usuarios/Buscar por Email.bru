@@ -1,0 +1,15 @@
+meta {
+  name: Buscar por Email
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url_name}}/usuarios/email/admin@tienda.com
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

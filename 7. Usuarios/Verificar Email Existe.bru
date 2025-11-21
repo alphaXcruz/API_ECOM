@@ -1,0 +1,20 @@
+meta {
+  name: Verificar Email Existe
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{url_name}}/usuarios/existe?email=admin@tienda.com
+  body: none
+  auth: inherit
+}
+
+params:query {
+  email: admin@tienda.com
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

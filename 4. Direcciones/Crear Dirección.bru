@@ -1,0 +1,29 @@
+meta {
+  name: Crear Dirección
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url_name}}/direcciones/cliente/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "calle": "Av. Reforma",
+    "numero": "123",
+    "ciudad": "Ciudad de México",
+    "codigoPostal": "01000",
+    "referencia": "Edificio azul, piso 3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

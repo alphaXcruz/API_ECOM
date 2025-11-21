@@ -1,0 +1,31 @@
+meta {
+  name: Actualizar Producto
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{url_name}}/productos/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Laptop HP Actualizada",
+    "descripcion": "Laptop HP 15 pulgadas, 16GB RAM, 512GB SSD",
+    "precio": 18000.00,
+    "stock": 15,
+    "categoria": {
+      "id": 1
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

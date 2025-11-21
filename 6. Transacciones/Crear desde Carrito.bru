@@ -1,0 +1,27 @@
+meta {
+  name: Crear desde Carrito
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url_name}}/transacciones/crear-desde-carrito
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "clienteId": 1,
+    "direccionId": 1,
+    "metodoPago": "TARJETA_CREDITO"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

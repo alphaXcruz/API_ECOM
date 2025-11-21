@@ -1,0 +1,27 @@
+meta {
+  name: Crear Categoría
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url_name}}/categorias
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Electrónica2",
+    "descripcion": "Productos electrónicos y tecnología"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

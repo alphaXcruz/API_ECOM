@@ -1,0 +1,20 @@
+meta {
+  name: Obtener por Período
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url_name}}/transacciones/periodo?inicio=2024-01-01T00:00:00&fin=2024-12-31T23:59:59
+  body: none
+  auth: inherit
+}
+
+params:query {
+  inicio: 2024-01-01T00:00:00
+  fin: 2024-12-31T23:59:59
+}
+
+settings {
+  encodeUrl: true
+}

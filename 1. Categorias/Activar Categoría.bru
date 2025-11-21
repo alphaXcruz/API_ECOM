@@ -1,0 +1,15 @@
+meta {
+  name: Activar Categoría
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{url_name}}/categorias/1/activar
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

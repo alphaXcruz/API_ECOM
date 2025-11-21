@@ -1,0 +1,27 @@
+meta {
+  name: Crear Cliente
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url_name}}/clientes
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Juan Pérez",
+    "email": "juan@example.com",
+    "telefono": "5551234567"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

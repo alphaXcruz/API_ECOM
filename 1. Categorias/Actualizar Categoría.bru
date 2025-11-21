@@ -1,0 +1,27 @@
+meta {
+  name: Actualizar Categoría
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{url_name}}/categorias/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Electrónica",
+    "descripcion": "Todo en tecnología moderna"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

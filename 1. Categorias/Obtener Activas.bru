@@ -1,0 +1,15 @@
+meta {
+  name: Obtener Activas
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_name}}/categorias/activas
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

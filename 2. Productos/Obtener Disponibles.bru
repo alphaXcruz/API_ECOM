@@ -1,0 +1,15 @@
+meta {
+  name: Obtener Disponibles
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url_name}}/productos/disponibles
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

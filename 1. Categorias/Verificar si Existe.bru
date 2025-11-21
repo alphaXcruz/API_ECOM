@@ -1,0 +1,19 @@
+meta {
+  name: Verificar si Existe
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{url_name}}/categorias/existe?nombre=Electrónica
+  body: none
+  auth: inherit
+}
+
+params:query {
+  nombre: Electrónica
+}
+
+settings {
+  encodeUrl: true
+}

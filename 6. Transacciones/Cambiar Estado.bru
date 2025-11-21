@@ -1,0 +1,19 @@
+meta {
+  name: Cambiar Estado
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{url_name}}/transacciones/1/cambiar-estado?estado=ENVIADA
+  body: none
+  auth: inherit
+}
+
+params:query {
+  estado: ENVIADA
+}
+
+settings {
+  encodeUrl: true
+}
