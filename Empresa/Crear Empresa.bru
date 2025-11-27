@@ -1,0 +1,33 @@
+meta {
+  name: Crear Empresa
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url_name}}/empresas
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "id": 1,
+    "nombre": "Sucursal Central",
+    "direccion": "Av. Busch #123, La Paz",
+    "facebook": "https://facebook.com/sucursalcentral",
+    "instagram": "https://instagram.com/sucursalcentral",
+    "twitter": "https://twitter.com/sucursalcentral",
+    "linkedin": "https://linkedin.com/company/sucursalcentral"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

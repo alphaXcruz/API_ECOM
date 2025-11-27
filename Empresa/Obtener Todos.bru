@@ -1,0 +1,16 @@
+meta {
+  name: Obtener Todos
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url_name}}/empresas
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

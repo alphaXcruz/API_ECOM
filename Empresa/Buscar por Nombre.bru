@@ -1,0 +1,20 @@
+meta {
+  name: Buscar por Nombre
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url_name}}/empresas/buscar?nombre=Sucursal Central
+  body: none
+  auth: inherit
+}
+
+params:query {
+  nombre: Sucursal Central
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

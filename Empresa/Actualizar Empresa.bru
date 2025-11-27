@@ -1,0 +1,32 @@
+meta {
+  name: Actualizar Empresa
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url_name}}/empresas/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "id": 1,
+    "nombre": "Sucursal Central",
+    "direccion": "Av. Busch #123, La Paz",
+    "facebook": "https://facebook.com/sucursalcentral",
+    "instagram": "https://instagram.com/sucursalcentral",
+    "twitter": "https://twitter.com/sucursalcentral",
+    "linkedin": "https://linkedin.com/company/sucursalcentral"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
