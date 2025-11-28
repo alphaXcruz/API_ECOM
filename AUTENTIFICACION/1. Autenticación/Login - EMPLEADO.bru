@@ -1,0 +1,34 @@
+meta {
+  name: Login - EMPLEADO
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/auth/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "empleado@ecommerce.com",
+    "password": "empleado123"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+      var jsonData = res.getBody();
+      bru.setVar('empleado_token', jsonData.accessToken);
+      console.log('✅ Token EMPLEADO guardado');
+  }
+}
+
+settings {
+  encodeUrl: true
+}

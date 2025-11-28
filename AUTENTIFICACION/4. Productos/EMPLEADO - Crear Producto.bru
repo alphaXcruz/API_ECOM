@@ -1,0 +1,34 @@
+meta {
+  name: EMPLEADO - Crear Producto
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/productos
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbXBsZWFkb0BlY29tbWVyY2UuY29tIiwiZXhwIjoxNzY0NDM5Njc5LCJpYXQiOjE3NjQzNTMyNzl9.Ds_xVD5M2nEWXHV66hUst5e7195b2Zv0H88I2a4H_8M
+}
+
+body:json {
+  {
+    "nombre": "Mouse Logitech",
+    "descripcion": "Mouse inalámbrico",
+    "precio": 350,
+    "stock": 50,
+    "categoria": {"id": 1}
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

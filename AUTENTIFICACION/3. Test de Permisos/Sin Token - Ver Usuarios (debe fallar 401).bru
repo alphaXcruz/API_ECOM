@@ -1,0 +1,16 @@
+meta {
+  name: Sin Token - Ver Usuarios (debe fallar 401)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/usuarios
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

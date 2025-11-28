@@ -1,0 +1,19 @@
+meta {
+  name: Obtener Usuario Actual (Me)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/auth/me
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{admin_token}}
+}
+
+settings {
+  encodeUrl: true
+}

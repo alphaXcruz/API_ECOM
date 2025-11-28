@@ -1,0 +1,34 @@
+meta {
+  name: Login - CLIENTE
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/auth/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "cliente@ecommerce.com",
+    "password": "cliente123"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+      var jsonData = res.getBody();
+      bru.setVar('cliente_token', jsonData.accessToken);
+      console.log('✅ Token CLIENTE guardado');
+  }
+}
+
+settings {
+  encodeUrl: true
+}

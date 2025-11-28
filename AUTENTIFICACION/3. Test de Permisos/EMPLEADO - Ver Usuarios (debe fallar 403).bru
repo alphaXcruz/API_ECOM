@@ -1,0 +1,20 @@
+meta {
+  name: EMPLEADO - Ver Usuarios (debe fallar 403)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/usuarios
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbXBsZWFkb0BlY29tbWVyY2UuY29tIiwiZXhwIjoxNzY0NDM5Njc5LCJpYXQiOjE3NjQzNTMyNzl9.Ds_xVD5M2nEWXHV66hUst5e7195b2Zv0H88I2a4H_8M
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

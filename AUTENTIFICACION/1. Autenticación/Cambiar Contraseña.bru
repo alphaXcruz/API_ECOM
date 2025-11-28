@@ -1,0 +1,31 @@
+meta {
+  name: Cambiar Contraseña
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{base_url}}/auth/cambiar-password
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{admin_token}}
+}
+
+body:json {
+  {
+    "passwordActual": "nuevaPassword456",
+    "passwordNueva": "admin123"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

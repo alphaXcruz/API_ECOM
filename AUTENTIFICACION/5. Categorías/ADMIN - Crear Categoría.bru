@@ -1,0 +1,31 @@
+meta {
+  name: ADMIN - Crear Categoría
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/categorias
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlY29tbWVyY2UuY29tIiwiZXhwIjoxNzY0NDQwNjQ1LCJpYXQiOjE3NjQzNTQyNDV9.QsC7tCY6UiCgW99rZCMGt8RINdzFDw95hw86G-VoaTc
+}
+
+body:json {
+  {
+    "nombre": "Electrónica",
+    "descripcion": "Productos electrónicos"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

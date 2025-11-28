@@ -1,0 +1,32 @@
+meta {
+  name: CLIENTE - Crear Producto (debe fallar 403)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/productos
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbGllbnRlQGVjb21tZXJjZS5jb20iLCJleHAiOjE3NjQ0NDE0MzgsImlhdCI6MTc2NDM1NTAzOH0.EUsuUX3BwqAMQqFiMX7fMB_RnspX7FstjkT9iSARjxc
+}
+
+body:json {
+  {
+    "nombre": "Producto Test",
+    "precio": 100,
+    "stock": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

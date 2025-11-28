@@ -1,0 +1,35 @@
+meta {
+  name: Login - ADMIN
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/auth/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "admin@ecommerce.com",
+    "password": "admin123"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+      var jsonData = res.getBody();
+      bru.setVar('admin_token', jsonData.accessToken);
+      console.log('Token ADMIN guardado');
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

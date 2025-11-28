@@ -1,0 +1,15 @@
+meta {
+  name: Ver Todas las Categorías (Público)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/categorias
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

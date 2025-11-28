@@ -1,0 +1,20 @@
+meta {
+  name: Validar Token
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/auth/validate
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlY29tbWVyY2UuY29tIiwiZXhwIjoxNzY0NDQwNTcwLCJpYXQiOjE3NjQzNTQxNzB9.o_A95I3s5xcUwHSJ8E06aHB-zzZ_SfjbDbtYiEr_Ot0
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
